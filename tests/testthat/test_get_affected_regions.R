@@ -1,4 +1,7 @@
-net <- get_GI_network(minigwas, snpMapping = minisnpMapping, ppi = minippi)
+library(dplyr)
+library(martini)
+
+net <- martini::get_GI_network(minigwas, snpMapping = minisnpMapping, ppi = minippi)
 
 cones <- minigwas$map
 colnames(cones) <- c("chr","snp","cm","pos","allele.1", "allele.2")
@@ -23,7 +26,7 @@ test_that("retrieve the right regions", {
                        1 1 40 70 A,B
                        1 2 45 85 C
                        ", header = TRUE, stringsAsFactors = FALSE) %>% 
-    as_tibble()
+    dplyr::as_tibble()
 
   expect_equal(regions, expected_regions)
 })
