@@ -22,7 +22,8 @@ test_that("retrieve the right regions", {
                        module chr start end genes
                        1 1 40 70 A,B
                        2 2 45 85 C
-                       ", header = TRUE, stringsAsFactors = FALSE)
+                       ", header = TRUE, stringsAsFactors = FALSE) %>% 
+    as_tibble()
 
   expect_equal(regions, expected_regions)
 })
