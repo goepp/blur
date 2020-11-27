@@ -58,7 +58,7 @@ compute_mod_size <- function(cones) {
 
 #' @importFrom dplyr mutate summarise select arrange
 #' @importFrom GenomicRanges GRanges
-#' @importFrom IRanges findOverlaps IRanges with
+#' @importFrom IRanges findOverlaps IRanges
 #' @importFrom S4Vectors queryHits subjectHits
 #' @export
 table_regions <- function(cones, net) {
