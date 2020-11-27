@@ -13,14 +13,14 @@ Imports:
   ggplot2,
   magrittr,
   tidyr,
-  IRanges
+  IRanges (>= 2.8.2),
+  S4Vectors,
+  GenomicRanges (>= 1.26.4)
 Suggests:
   circlize (>= 0.4.0),
   GenomeInfoDb (>= 1.10.3),
-  GenomicRanges (>= 1.26.4),
   Gviz (>= 1.18.2),
-  IRanges (>= 2.8.2)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1
