@@ -21,7 +21,7 @@ test_that("retrieve the right regions", {
   expected_regions <- read.table(text = "
                        module chr start end genes
                        1 1 40 70 A,B
-                       2 2 45 85 C
+                       1 2 45 85 C
                        ", header = TRUE, stringsAsFactors = FALSE) %>% 
     as_tibble()
 
