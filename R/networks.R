@@ -41,14 +41,14 @@ get_affected_genes <- function(cones, net) {
 
 }
 
-#' @importFrom dplyr data_frame filter mutate group_by summarize ungroup
+#' @importFrom dplyr tibble filter mutate group_by summarize ungroup
 #' @importFrom magrittr %>%
 #' @importFrom stats na.omit
 #' @export
 get_affected_regions <- function(cones, net) {
 
   V <- martini:::subvert(net, 'name', cones$snp)
-  snp2gene <- data_frame(snp = V$name, gene = V$gene)
+  snp2gene <- tibble(snp = V$name, gene = V$gene)
 
   filter(cones, selected) %>%
     left_join(snp2gene, by = "snp") %>%
